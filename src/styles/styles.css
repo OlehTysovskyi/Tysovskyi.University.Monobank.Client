@@ -1,0 +1,45 @@
+@import url("navbar.css");
+@import url("dashboard.css");
+@import url("transaction-history.css");
+@import url("cards-and-accounts.css");
+@import url("create-card.css");
+@import url("create-transfer.css");
+@import url("other-payment.css");
+@import url("iban-payment.css");
+
+
+body {
+  background-color: rgb(225, 225, 225);
+}
+
+@media (max-width: 768px) {
+
+  .body-container {
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .main-container {
+    width: 100%;
+    height: fit-content;
+  }
+
+}
+
+@media (min-width: 768px) {
+
+    .body-container {
+      max-width: 25vw;
+      height: fit-content;
+      margin: 0 auto;
+      background-color: rgb(255, 255, 255);
+    }
+
+    .main-container {
+      width: 100%;
+      height: fit-content;
+    }
+
+  }
+

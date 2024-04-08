@@ -1,0 +1,99 @@
+.create-card {
+    min-height: 100vh;
+    background-color: rgb(244, 244, 244);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    z-index: 1002;
+}
+
+.create-card .back-btn {
+    width: 4vh;
+    height: 4vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 3vw;
+    
+    border-radius: 50%;
+    
+    color: red;
+    font-size: 3vw;
+    position: absolute;
+    top: 2.1vh;
+    left: 2.6vh;
+}
+
+.create-card .header {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.2vw;
+    font-weight: 700;
+}
+
+.create-card .cards-container {
+    width: 90%;
+    min-height: 20vh;
+    padding: 10vh 3vh 3vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    background: linear-gradient(to top right, rgb(83, 86, 110, 0.2), rgba(189, 178, 184, 0.2));
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+    align-items: center;
+    position: relative;
+}
+
+.create-card .container-header {
+    height: 3vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-size: 1.2vw;
+    font-weight: 700;
+    position: absolute;
+    top: 3vh;
+    left: 8.5vh;
+}
+
+.divider {
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid rgb(150, 150, 150);
+}
+
+.create-card .card {
+    width: 15vw;
+    height: 9vw;
+    margin-bottom: 3vh;
+    padding: 1.5vw;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+    font-size: 2.3vh;
+}  
+
+.stripe {
+    width: 37%;
+    height: 1.5vh;
+    margin: 0 1vh 0 0;
+    border-radius: 1vh;
+    background: linear-gradient(to top right, rgb(83, 86, 110), rgb(133, 126, 130));
+}

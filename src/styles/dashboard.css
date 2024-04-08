@@ -1,0 +1,79 @@
+.dashboard {
+    width: 100%;
+    height: 60vh;
+    padding: 2vh 4vh 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(to right, rgb(187, 92, 224), pink);
+    position: relative;
+    z-index: 1;
+}
+  
+.cards-page-btn {
+    width: 2vw;
+    height: 2vw;
+    margin: 0 auto;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+}
+  
+.logout-btn {
+    width: 100%;
+    height: 7vh;
+    border-radius: 1.5vh;
+    background-color: rgb(85, 84, 198);
+    color: white;
+}
+  
+.dashboard .funds-box {
+    width: 100%;
+}
+  
+.dashboard .funds {
+    font-size: 3.5vw;
+    font-weight: 700;
+    color: white;
+}
+  
+.dashboard .own-funds, .credit-limit {
+    font-size: 0.8vw;
+    color: black;
+}
+  
+.dashboard .menu {
+    width: 100%;
+    height: 13vh;
+    display: flex;
+    justify-content: space-between;
+}
+  
+.dashboard .btn-container {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.dashboard .btn {
+    width: 3.5vw;
+    height: 3.5vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vh;
+    color: white;
+    background-color: black;
+}
+  
+.dashboard .btn-text {
+    margin-top: 0.3vw;
+    text-align: center;
+    font-size: 0.8vw;
+    color: white;
+}

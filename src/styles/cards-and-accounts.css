@@ -1,0 +1,119 @@
+.cards-and-accounts {
+  min-height: 100vh;
+  padding: 5% 5% 8vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  position: relative;
+  background: linear-gradient(to top right, rgb(19, 23, 51), rgb(75, 62, 63));
+  z-index: 1002;
+}
+
+.cards-and-accounts .profile {
+  width: 100%;
+  height: 20vh;
+  margin: 0 0 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cards-and-accounts .avatar {
+  width: 6vw;
+  height: 6vw;
+  border-radius: 50%;
+  background-color: rgb(150, 135, 0);
+}
+
+.cards-and-accounts .username {
+  color: white;
+  font-size: 1.2vw;
+}
+
+.cards-and-accounts .back-btn {
+  width: 4vh;
+  height: 4vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  font-size: 3vw;
+  
+  background: linear-gradient(to top right, rgb(83, 86, 110), rgb(133, 126, 130));
+  border-radius: 50%;
+  
+  position: absolute;
+  top: 2.1vh;
+  left: 2.6vh;
+}
+  
+.cards-and-accounts .cards-container {
+  width: 100%;
+  display: flex;
+  padding: 0 0 3vh;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to top right, rgb(83, 86, 110), rgb(133, 126, 130));
+  border-radius: 20px;
+}
+
+.cards-and-accounts .header {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.2vw;
+}
+
+.cards-and-accounts .create-card-or-account-but {
+  width: 90%;
+  padding: 3vh 0 0;
+  text-align: center;
+  border-top: 1px solid rgb(150, 150, 150);
+  color: white;
+}
+  
+.cards-and-accounts .card {
+  width: 15vw;
+  height: 9vw;
+  margin-bottom: 3vh;
+  padding: 1.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.black-card {
+  background-color: black;
+  color: white;
+}
+
+.white-card {
+  background-color: white;
+  color: black;
+}
+    
+.cards-and-accounts .card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+    
+.cards-and-accounts .card .account-number {
+  font-weight: bold;
+}
+    
+.cards-and-accounts .card .card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

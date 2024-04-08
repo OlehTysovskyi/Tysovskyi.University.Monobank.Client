@@ -1,0 +1,77 @@
+.other-payments {
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+    background-color: white;
+    z-index: 1002;
+}
+
+.other-payments .back-btn {
+    width: 4vh;
+    height: 4vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        
+    border-radius: 50%;
+    
+    color: white;
+    font-size: 3vw;
+    position: absolute;
+    top: 2.1vh;
+    left: 2.6vh;
+}
+
+.other-payments .header {
+    height: 20vh;
+    display: flex;
+    padding: 0 0 0 3vh;
+    justify-content: flex-start;
+    align-items: center;
+    
+    background: linear-gradient(to top, rgb(39, 79, 108), rgb(78, 117, 143));
+    color: white;
+    font-size: 3.5vh;
+}
+
+.other-payments .payments-container {
+    width: 90%;
+    height: 50vh;
+    padding: 7vh 3vh 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    border-radius: 2.5vh;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+
+    background-color: white;
+    position: relative;
+    top: -6vh;
+    left: 2.8vh;
+}
+
+.other-payments .container-header {
+    position: absolute;
+    top: 3vh;
+    color: rgb(140, 140, 140);
+}
+
+.other-payments .payment-method {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+}
+
+.other-payments .icon {
+    width: 5vh;
+    height: 5vh;
+    margin: 0 1vh 0 0;
+    background-color: rgb(68, 148, 221);
+    border-radius: 50%;
+}
+

@@ -1,0 +1,85 @@
+.trans-hist {
+    width: 100%;
+    height: fit-content;
+    min-height: 40vh;
+    padding: 1vw 1vw 0;
+    
+    border-top-left-radius: 1.2vw;
+    border-top-right-radius: 1.2vw;
+    background-color: white;
+  
+    position: relative;
+    top: -8vh;
+    z-index: 2;
+} 
+  
+.trans-hist .header {
+    width: 100%;
+    height: 2vw;
+    margin: 0 0 2vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+  
+.header-but {
+    width: 2vw;
+    height: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid rgb(135, 135, 135);
+    cursor: pointer;
+}
+  
+.trans-hist .messages-but {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+  
+.trans-hist .alter-text {
+    width: 100%;
+    text-align: center;
+    font-size: 1vw;
+}
+  
+.trans-item {
+    width: 100%;
+    height: 5vh;
+    margin: 0 0 3vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.trans-item .user-data {
+    display: flex;
+    align-items: center;
+}
+  
+.trans-item .user-data .avatar {
+    width: 2vw;
+    height: 2vw;
+    margin: 0 0.5vw 0 0;
+    background-color: pink;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+  
+.trans-item .user-data .username {
+    font-size: 1vw;
+    color: black;
+}
+  
+.trans-item .amount {
+    font-size: 1.3vw;
+    color: black;
+}
+  
+.trans-item .incoming {
+    color: green;
+}
+  
