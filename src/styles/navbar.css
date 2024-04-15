@@ -15,11 +15,50 @@
   background-color: rgba(0, 0, 0, 0);
   border: none;
 }
+
+.navbar a {
+  height: 7vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
   
 .nav-icon {
+  width: 5vh;
+  height: 5vh;
+  color: white;
+  fill: rgb(150, 150, 150);
   transition: transform 0.1s ease-in-out;
+}
+
+.nav-icon line,
+.nav-icon circle {
+  stroke-width: 2px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.saving-icon {
+  color: red;
+}
+
+.menu-icon {
+  color: rgb(150, 150, 150);
 }
   
 .nav-icon:active {
+  fill: rgb(231, 95, 91);
   transform: scale(0.7);
+}
+
+.nav-icon-active {
+  fill: red;
+}
+
+.navbar .label {
+  font-size: 1.7vh;
+  color: rgb(150, 150, 150);
 }

@@ -21,11 +21,12 @@ const CreateCard = () => {
     };
 
     fetchUserCards();
-  }, [getUserCards, user.id]);
+  }, [user.id]);
 
   const handleCreatingCard = async (type) => {
     if (
-      userCards.some((card) => card.type === "BLACK" || card.type === "WHITE")
+      userCards.every((card) => card.type !== "BLACK") &&
+      userCards.every((card) => card.type !== "WHITE")
     ) {
       setShowMessage(true);
     } else {
@@ -51,7 +52,7 @@ const CreateCard = () => {
       <div className="cards-container">
         {cardsLoaded && (
           <React.Fragment>
-            <div className="container-header">Картки</div>
+            <div className="container-header">{userCards.length === 2 ? <>Немає доступних карток <br /> для створення</> : "Картки"}</div>
             {!userCards.some((card) => card.type === "BLACK") && (
               <div
                 className="card black-card"
@@ -74,8 +75,8 @@ const CreateCard = () => {
             )}
           </React.Fragment>
         )}
+       
       </div>
-      {showMessage && <div>Немає доступних карток для створення</div>}
     </div>
   );
 };

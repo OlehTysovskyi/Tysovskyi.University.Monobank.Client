@@ -64,6 +64,7 @@
     font-size: 1.2vw;
     font-weight: 700;
     position: absolute;
+    text-align: center;
     top: 3vh;
     left: 8.5vh;
 }

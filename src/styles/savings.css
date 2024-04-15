@@ -1,0 +1,94 @@
+.savings {
+    width: 100%;
+    height: 100vh;
+
+    background-color: white;
+    position: relative;
+}
+
+.savings .header {
+    height: 25vh;
+    padding: 4vh 0 11vh 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    background: linear-gradient(to top, rgb(51, 105, 187), rgb(80, 144, 235));
+    color: white;
+    font-size: 3vh;
+}
+
+.savings .balance {
+    font-size: 5vh;
+    font-weight: 700;
+}
+
+.savings .container {
+    height: 75vh;
+    padding: 5vh 3vh 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+    background-color: rgb(244, 244, 244);
+    font-size: 3vh;
+    position: relative;
+}
+
+.savings .create-bank {
+    width: 55%;
+    height: 10vh;
+    padding: 0 10vh 0 2.5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+
+    border-radius: 2.5vh;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    font-size: 2.5vh;
+
+    background-color: white;
+    position: absolute;
+    top: -7vh;
+    left: 2.8vh;
+}
+
+.savings .icon {
+    width: 5vh;
+    height: 5vh;
+    margin: 0 1vh 0 0;
+    background-color: rgb(235, 83, 109);
+    border-radius: 50%;
+}
+
+.savings .bank {
+    width: 100%;
+    height: 10vh;
+    margin: 1vh 0 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.savings .info {
+    height: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.savings .name {
+    font-size: 2.5vh;
+    color: black;
+}
+
+.savings .amount {
+    font-size: 1.5vh;
+    color: rgb(150, 150, 150);
+}
+
+
+
