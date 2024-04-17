@@ -9,9 +9,9 @@ const Savings = () => {
         <div className="balance">{0.01}₴</div>
       </div>
       <div className="container">
-        <NavLink className="create-bank" to="/">
+        <NavLink className="create-bank" to="/create-bank">
           <div className="icon" />
-          Відкрити <br />банку
+          <div>Відкрити <br />банку</div>
         </NavLink>
         Банки
         <NavLink className="bank">

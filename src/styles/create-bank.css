@@ -1,0 +1,76 @@
+
+.create-bank {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    z-index: 1002;
+}
+
+.create-bank .header {
+    width: 100%;
+    height: fit-content;
+    margin: 0 0 8vh;
+    padding: 10vh 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.create-bank img {
+    width: 55%;
+}
+
+.create-bank .input-con {
+    width: 100%;
+    height: 11vh;
+    margin: 0 0 7vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.create-bank label {
+    color: rgb(128, 128, 128);
+}
+
+.create-bank input {
+    height: 7vh;
+    border-radius: 2vh;
+    border: 1px solid rgb(180, 180, 180);
+    text-align: center;
+    box-shadow: inset 0 0 5px rgb(150, 150, 150); 
+}
+
+.create-bank .submit-btn {
+    width: 90%;
+    height: 8vh;
+    border-radius: 2.5vh;
+    background-color: rgb(231, 95, 91);
+    color: white;
+    position: absolute;
+    bottom: 3vh;
+}
+
+.create-bank .submit-btn:disabled {
+    background-color: rgb(203, 203, 203);
+    color: white;
+    cursor: not-allowed;
+}
+
+.create-bank .back-btn {
+    width: 4vh;
+    height: 4vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+    color: rgb(231, 95, 91);
+    position: absolute;
+    top: 2.1vh;
+    left: 2.6vh;
+  }
