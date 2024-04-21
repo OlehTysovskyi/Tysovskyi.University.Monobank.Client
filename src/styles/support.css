@@ -1,5 +1,4 @@
-
-.create-bank {
+.support {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -10,42 +9,38 @@
     z-index: 1002;
 }
 
-.create-bank .header {
+.support .header {
     width: 100%;
-    height: fit-content;
+    height: 20vh;
     margin: 0 0 8vh;
-    padding: 10vh 0 0;
-    display: flex;
-    justify-content: center;
+    padding: 10vh 3vh 3vh;
+    background-color: rgb(250, 250, 250);
+    border-bottom: 1px solid rgb(232, 232, 232);
+    font-size: 3.5vh;
 }
 
-.create-bank img {
-    width: 55%;
+.support .small-text {
+    margin: 1vh 0 0;
+    font-size: 2.2vh;
+    color: rgb(140, 140, 140);
 }
 
-.create-bank .input-con {
-    width: 100%;
-    height: 11vh;
-    margin: 0 0 7vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.create-bank label {
+.support label {
+    margin: 0 0 3vh;
+    font-size: 3vh;
     color: rgb(128, 128, 128);
 }
 
-.create-bank input {
-    height: 7vh;
+.support textarea {
+    width: 90%;
+    height: 40vh;
+    padding: 2vh;
     border-radius: 2vh;
     border: 1px solid rgb(180, 180, 180);
-    text-align: center;
     box-shadow: inset 0 0 5px rgb(150, 150, 150); 
 }
 
-.create-bank .submit-btn {
+.support .submit-btn {
     width: 90%;
     height: 8vh;
     border-radius: 2.5vh;
@@ -55,13 +50,7 @@
     bottom: 3vh;
 }
 
-.create-bank .submit-btn:disabled {
-    background-color: rgb(203, 203, 203);
-    color: white;
-    cursor: not-allowed;
-}
-
-.create-bank .back-btn {
+.support .back-btn {
     width: 4vh;
     height: 4vh;
     margin: 0 auto;

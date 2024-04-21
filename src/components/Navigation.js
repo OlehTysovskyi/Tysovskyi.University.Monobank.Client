@@ -14,8 +14,10 @@ import CreateTransfer from "../pages/CreateTransfer";
 import CardsAndAccounts from "../pages/CardsAndAccounts";
 import OtherPayments from "../pages/OtherPayments";
 import IBANPayment from "../pages/IBANPayment";
-import Savings from "../pages/Savings"
+import Savings from "../pages/Savings";
 import CreateBank from "../pages/CreateBank";
+import More from "../pages/More";
+import Support from "../pages/Support";
 
 import { useAuth } from "../contexts/authContext";
 
@@ -37,6 +39,8 @@ const Navigation = () => {
           <Route path="/iban-payment" element={<IBANPayment />} />
           <Route path="/savings" element={<Savings />} />
           <Route path="/create-bank" element={<CreateBank />} />
+          <Route path="/more" element={<More />} />
+          <Route path="/support" element={<Support />} />
         </Route>
         <Route path="/registration" element={<Registration />} />
         <Route path="/login" element={<Login />} />
