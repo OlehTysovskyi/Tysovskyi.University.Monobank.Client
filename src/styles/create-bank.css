@@ -55,12 +55,6 @@
     bottom: 3vh;
 }
 
-.create-bank .submit-btn:disabled {
-    background-color: rgb(203, 203, 203);
-    color: white;
-    cursor: not-allowed;
-}
-
 .create-bank .back-btn {
     width: 4vh;
     height: 4vh;
@@ -68,7 +62,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vw;
+    font-size: 5vh;
     color: rgb(231, 95, 91);
     position: absolute;
     top: 2.1vh;

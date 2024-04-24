@@ -35,10 +35,10 @@
 .more .support{
     width: 55%;
     height: 10vh;
-    padding: 0 7.5vh 0 2.5vh;
+    padding: 0 0 0 2.5vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     color: black;
 
@@ -55,7 +55,7 @@
 .more .icon {
     width: 5vh;
     height: 5vh;
-    margin: 0 1vh 0 0;
+    margin: 0 2.5vh 0 0;
     background-color: rgb(70, 152, 230);
     border-radius: 50%;
 }

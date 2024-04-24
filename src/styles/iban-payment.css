@@ -65,12 +65,6 @@
     bottom: 10vh;
 }
 
-.iban-payment .submit-btn:disabled {
-    background-color: rgb(203, 203, 203);
-    color: white;
-    cursor: not-allowed;
-}
-
 .iban-payment .back-btn {
     width: 4vh;
     height: 4vh;

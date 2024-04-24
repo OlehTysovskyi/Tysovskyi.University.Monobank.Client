@@ -21,15 +21,15 @@
 }
 
 .cards-and-accounts .avatar {
-  width: 6vw;
-  height: 6vw;
+  width: 10vh;
+  height: 10vh;
   border-radius: 50%;
   background-color: rgb(150, 135, 0);
 }
 
 .cards-and-accounts .username {
   color: white;
-  font-size: 1.2vw;
+  font-size: 3vh;
 }
 
 .cards-and-accounts .back-btn {
@@ -40,7 +40,7 @@
   justify-content: center;
   align-items: center;
   
-  font-size: 3vw;
+  font-size: 5vh;
   
   background: linear-gradient(to top right, rgb(83, 86, 110), rgb(133, 126, 130));
   border-radius: 50%;
@@ -68,7 +68,7 @@
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 1.2vw;
+  font-size: 3vh;
 }
 
 .cards-and-accounts .create-card-or-account-but {
@@ -77,21 +77,24 @@
   text-align: center;
   border-top: 1px solid rgb(150, 150, 150);
   color: white;
+  font-size: 2vh;
 }
   
 .cards-and-accounts .card {
-  width: 15vw;
-  height: 9vw;
+  width: 30vh;
+  height: 18vh;
   margin-bottom: 3vh;
-  padding: 1.5vw;
+  padding: 5vh 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
   cursor: pointer;
+  font-size: 2vh;
 }
 
 .black-card {

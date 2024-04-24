@@ -16,13 +16,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    font-size: 3vw;
-    
-    border-radius: 50%;
-    
-    color: red;
-    font-size: 3vw;
+    font-size: 5vh;
+    color: rgb(231, 95, 91);
     position: absolute;
     top: 2.1vh;
     left: 2.6vh;
@@ -35,7 +30,7 @@
     justify-content: center;
     align-items: center;
 
-    font-size: 1.2vw;
+    font-size: 2.2vh;
     font-weight: 700;
 }
 
@@ -61,25 +56,19 @@
     justify-content: flex-start;
     align-items: center;
 
-    font-size: 1.2vw;
+    font-size: 2.2vh;
     font-weight: 700;
     position: absolute;
     text-align: center;
     top: 3vh;
-    left: 8.5vh;
-}
-
-.divider {
-    width: 90%;
-    margin: 0 auto;
-    border-bottom: 1px solid rgb(150, 150, 150);
+    left: 6vh;
 }
 
 .create-card .card {
-    width: 15vw;
-    height: 9vw;
+    width: 30vh;
+    height: 18vh;
     margin-bottom: 3vh;
-    padding: 1.5vw;
+    padding: 5vh 3vh;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;

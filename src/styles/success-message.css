@@ -1,0 +1,44 @@
+.success-msg {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: absolute;
+    z-index: 1003;
+}
+
+.content-con {
+    width: 100%;
+    height: 100vh;
+    padding: 0 0 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.success-msg .msg-con{
+    width: 90%;
+    height: 25vh;
+    padding: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(250, 250, 250);
+    border: 1px solid rgb(232, 232, 232);
+    border-radius: 2vh;
+    font-size: 4vh;
+}
+
+.success-msg .close-btn {
+    width: 90%;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2.5vh;
+    background-color: rgb(231, 95, 91);
+    color: white;
+    position: absolute;
+    left: 5%;
+    bottom: 3vh;
+}
