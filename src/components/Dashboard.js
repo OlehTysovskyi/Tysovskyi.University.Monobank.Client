@@ -6,6 +6,7 @@ const Dashboard = () => {
   const { setIsLoggedIn, currentUser, currentCard } = useAuth();
 
   const handleLogout = () => {
+    throw Error;
     setIsLoggedIn(false);
     localStorage.clear();
   };
