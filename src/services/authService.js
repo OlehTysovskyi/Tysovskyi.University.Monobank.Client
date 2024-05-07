@@ -6,7 +6,7 @@ export const useAuthentication = () => {
 
   const login = async (formData) => {
     try {
-      const response = await fetch("https://tysovskyi-university-monobank-server.vercel.app/api/login", {
+      const response = await fetch("/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
