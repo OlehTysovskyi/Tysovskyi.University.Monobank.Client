@@ -57,7 +57,6 @@ const CreateCard = () => {
             {!userCards.some((card) => card.type === "BLACK") && (
               <div
                 className="card black-card"
-                onTouchStart={() => handleCreatingCard("BLACK")}
                 onClick={() => handleCreatingCard("BLACK")}
               >
                 <div className="stripe"></div>
@@ -68,7 +67,6 @@ const CreateCard = () => {
             {!userCards.some((card) => card.type === "WHITE") && (
               <div
                 className="card white-card"
-                onTouchStart={() => handleCreatingCard("BLACK")}
                 onClick={() => handleCreatingCard("WHITE")}
               >
                 <div className="stripe"></div>
