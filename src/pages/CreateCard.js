@@ -24,20 +24,11 @@ const CreateCard = () => {
   }, [user.id]);
 
   const handleCreatingCard = async (type) => {
-    if (
-      userCards.length != 0 ||
-      (userCards.every((card) => card.type !== "BLACK") &&
-        userCards.every((card) => card.type !== "WHITE"))
-    ) {
-      setShowMessage(true);
-      alert(userCards.length);
-    } else {
-      try {
-        await createCard({ user_id: user.id, type: type, balance: 0 });
-        setRedirect(true);
-      } catch (error) {
-        alert(error.message);
-      }
+    try {
+      await createCard({ user_id: user.id, type: type, balance: 0 });
+      setRedirect(true);
+    } catch (error) {
+      alert(error.message);
     }
   };
 
