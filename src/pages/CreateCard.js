@@ -29,6 +29,7 @@ const CreateCard = () => {
       userCards.every((card) => card.type !== "WHITE")
     ) {
       setShowMessage(true);
+      alert("lox");
     } else {
       try {
         await createCard({ user_id: user.id, type: type, balance: 0 });
