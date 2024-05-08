@@ -25,12 +25,10 @@ const CreateCard = () => {
 
   const handleCreatingCard = async (type) => {
     if (
-      userCards.length === 0 ||
-      (userCards.every((card) => card.type !== "BLACK") &&
-        userCards.every((card) => card.type !== "WHITE"))
+      userCards.length === 0 || (userCards.every((card) => card.type !== "BLACK") && userCards.every((card) => card.type !== "WHITE"))
     ) {
       setShowMessage(true);
-      alert(userCards);
+      alert(userCards.length);
     } else {
       try {
         await createCard({ user_id: user.id, type: type, balance: 0 });
