@@ -23,10 +23,10 @@ const CreateCard = () => {
     fetchUserCards();
   }, [user.id]);
 
+  // (userCards.every((card) => card.type !== "BLACK") && userCards.every((card) => card.type !== "WHITE"))
+
   const handleCreatingCard = async (type) => {
-    if (
-      userCards.length === 0 || (userCards.every((card) => card.type !== "BLACK") && userCards.every((card) => card.type !== "WHITE"))
-    ) {
+    if (userCards.length === 0) {
       setShowMessage(true);
       alert(userCards.length);
     } else {
