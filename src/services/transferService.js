@@ -1,6 +1,6 @@
 export const createTransfer = async (formData) => {
   try {
-    const response = await fetch("/api/create-transfer", {
+    const response = await fetch("https://tysovskyi-university-monobank-server.vercel.app/api/create-transfer", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

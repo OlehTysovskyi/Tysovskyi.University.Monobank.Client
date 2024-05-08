@@ -5,7 +5,7 @@ export const useCardService = () => {
 
   const createCard = async (formData) => {
     try {
-      const response = await fetch("/api/create-card", {
+      const response = await fetch("https://tysovskyi-university-monobank-server.vercel.app/api/create-card", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -33,7 +33,7 @@ export const useCardService = () => {
         return null;
       }
 
-      const response = await fetch(`/api/get-card-by-id/${cardId}`);
+      const response = await fetch(`https://tysovskyi-university-monobank-server.vercel.app/api/get-card-by-id/${cardId}`);
       if (!response.ok) {
         throw new Error("Failed to fetch card data");
       }
@@ -48,7 +48,7 @@ export const useCardService = () => {
 
   const getUserCards = async (userId) => {
     try {
-      const response = await fetch(`/api/get-user-cards/${userId}`);
+      const response = await fetch(`https://tysovskyi-university-monobank-server.vercel.app/api/get-user-cards/${userId}`);
       if (!response.ok) {
         throw new Error("Failed to fetch user cards");
       }
@@ -65,7 +65,7 @@ export const useCardService = () => {
         return null;
       }
 
-      const response = await fetch(`/api/get-username-by-card-num/${cardNum}`);
+      const response = await fetch(`https://tysovskyi-university-monobank-server.vercel.app/api/get-username-by-card-num/${cardNum}`);
       if (!response.ok) {
         throw new Error("Failed to fetch user data");
       }
@@ -80,7 +80,7 @@ export const useCardService = () => {
 
   const updateBalance = async (formData) => {
     try {
-      const response = await fetch("/api/update-balance", {
+      const response = await fetch("https://tysovskyi-university-monobank-server.vercel.app/api/update-balance", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

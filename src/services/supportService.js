@@ -12,7 +12,7 @@ export const useSupportService = () => {
 
       formData.sender_email = JSON.parse(currentUser).email;
 
-      const response = await fetch("/api/send-support-email", {
+      const response = await fetch("https://tysovskyi-university-monobank-server.vercel.app/api/send-support-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

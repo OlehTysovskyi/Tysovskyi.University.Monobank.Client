@@ -38,7 +38,7 @@ export const useAuthentication = () => {
 
   const register = async (formData) => {
     try {
-      const response = await fetch("/api/register", {
+      const response = await fetch("https://tysovskyi-university-monobank-server.vercel.app/api/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -73,7 +73,7 @@ export const useAuthentication = () => {
 
   const handleGoogleAuth = async () => {
     try {
-      window.open("http://localhost:3001/auth/google", "_self");
+      window.open("https://tysovskyi-university-monobank-server.vercel.app/auth/google", "_self");
       console.log("Login successful");
     } catch (error) {
       console.error("Error:", error);
@@ -82,7 +82,7 @@ export const useAuthentication = () => {
 
   const fetchUserProfile = async () => {
     try {
-      const response = await fetch("http://localhost:3001/profile", {
+      const response = await fetch("https://tysovskyi-university-monobank-server.vercel.app/profile", {
         credentials: "include",
       });
 
