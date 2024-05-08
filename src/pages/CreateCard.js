@@ -25,8 +25,9 @@ const CreateCard = () => {
 
   const handleCreatingCard = async (type) => {
     if (
-      userCards.every((card) => card.type !== "BLACK") &&
-      userCards.every((card) => card.type !== "WHITE")
+      userCards.length === 0 ||
+      (userCards.every((card) => card.type !== "BLACK") &&
+        userCards.every((card) => card.type !== "WHITE"))
     ) {
       setShowMessage(true);
       alert("lox");
@@ -53,7 +54,15 @@ const CreateCard = () => {
       <div className="cards-container">
         {cardsLoaded && (
           <React.Fragment>
-            <div className="container-header">{userCards.length === 2 ? <>Немає доступних карток <br /> для створення</> : "Картки"}</div>
+            <div className="container-header">
+              {userCards.length === 2 ? (
+                <>
+                  Немає доступних карток <br /> для створення
+                </>
+              ) : (
+                "Картки"
+              )}
+            </div>
             {!userCards.some((card) => card.type === "BLACK") && (
               <div
                 className="card black-card"
@@ -78,7 +87,6 @@ const CreateCard = () => {
             )}
           </React.Fragment>
         )}
-       
       </div>
     </div>
   );
