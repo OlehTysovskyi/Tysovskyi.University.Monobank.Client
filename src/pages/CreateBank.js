@@ -13,10 +13,15 @@ const CreateBank = () => {
   const [redirect, setRedirect] = useState(false);
   const [isNameEntered, setIsNameEntered] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChangeName = (e) => {
     const newName = e.target.value;
-    setFormData({ ...formData, name: newName });
+    setFormData((prevFormData) => ({ ...prevFormData, name: newName }));
     setIsNameEntered(newName.trim() !== "" && newName.trim() !== "На");
+  };
+  
+  const handleChangeGoalAmount = (e) => {
+    const newGoalAmount = e.target.value;
+    setFormData((prevFormData) => ({ ...prevFormData, goal_amount: newGoalAmount }));
   };
   
   const handleSubmit = (e) => {
@@ -41,7 +46,7 @@ const CreateBank = () => {
         <input
           name="name"
           value={formData.name}
-          onChange={handleChange}
+          onChange={handleChangeName}
         ></input>
       </div>
       <div className="input-con">
@@ -49,7 +54,7 @@ const CreateBank = () => {
         <input
           name="goal_amount"
           value={formData.goal_amount}
-          onChange={handleChange}
+          onChange={handleChangeGoalAmount}
         ></input>
       </div>
       <button type="submit" className="submit-btn" disabled={!isNameEntered}>
