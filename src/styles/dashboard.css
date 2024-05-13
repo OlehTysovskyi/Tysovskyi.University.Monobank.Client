@@ -11,19 +11,16 @@
 }
   
 .cards-page-btn {
-    width: 2vh;
-    height: 2vh;
+    width: 3.5vh;
+    height: 3.5vh;
     margin: 0 auto;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-  
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 50%;
 }
   
 .logout-btn {
     width: 100%;
+    margin: 2vh 0 0;
     height: 7vh;
     border-radius: 1.5vh;
     background-color: rgb(85, 84, 198);

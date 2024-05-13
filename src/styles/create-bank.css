@@ -46,13 +46,13 @@
 }
 
 .create-bank .submit-btn {
-    width: 90%;
+    width: 80%;
     height: 8vh;
-    border-radius: 2.5vh;
+    border-radius: 2vh;
     background-color: rgb(231, 95, 91);
     color: white;
     position: absolute;
-    bottom: 3vh;
+    bottom: 10vh;
 }
 
 .create-bank .back-btn {

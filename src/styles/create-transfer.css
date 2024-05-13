@@ -57,9 +57,9 @@
 }
 
 .create-transfer .submit-btn {
-    width: 70%;
-    height: 9vh;
-    border-radius: 1.5vh;
+    width: 80%;
+    height: 8vh;
+    border-radius: 2vh;
     background-color: rgb(231, 95, 91);
     color: white;
     position: absolute;

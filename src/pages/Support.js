@@ -49,7 +49,7 @@ const Support = () => {
           <div className="small-text">Ми на зв'язку 24/7</div>
         </div>
         <div className="hint">Зв'язок з нами через електронну пошту</div>
-        <label>Опишіть вашу проблему</label>
+        <label>Напишіть ваше повідомлення</label>
         <textarea
           value={formData.problem_text}
           onChange={handleChange}
@@ -58,7 +58,7 @@ const Support = () => {
           maxLength={maxLength}
         ></textarea>
         <div className="character-count">
-          {formData.problem_text.length}/{maxLength}
+          {formData.problem_text.length}/{maxLength} (мін 50 символів)
         </div>
         <button
           type="submit"

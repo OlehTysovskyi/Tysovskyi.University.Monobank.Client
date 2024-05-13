@@ -15,16 +15,17 @@
   
 .trans-hist .header {
     width: 100%;
-    height: 5vh;
+    margin: 0 0 2vh;
+    height: 3.5vh;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     font-size: 2.5vh;
 }
   
 .header-but {
-    width: 3vh;
-    height: 3vh;
+    width: 3.5vh;
+    height: 3.5vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,8 +36,9 @@
   
 .trans-hist .alter-text {
     width: 100%;
+    margin: 3vh 0 0;
     text-align: center;
-    font-size: 3vh;
+    font-size: 2.5vh;
 }
   
 .trans-item {
