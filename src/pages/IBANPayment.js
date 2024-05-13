@@ -86,6 +86,7 @@ const IBANPayment = () => {
         value={formData.amount}
         onChange={handleChange}
         className="amount-input"
+        inputMode="numeric"
       />
       <button
         type="submit"

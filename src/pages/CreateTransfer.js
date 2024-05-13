@@ -62,6 +62,7 @@ const CreateTransfer = () => {
           placeholder="Уведіть ім'я, номер картки або телефону"
           className="card-num-input"
           autocomplete="on"
+          inputMode="numeric"
         />
       </div>
       <input
@@ -70,6 +71,7 @@ const CreateTransfer = () => {
         value={formData.amount}
         onChange={handleChange}
         className="amount-input"
+        inputMode="numeric"
       />
       <button type="submit" className="submit-btn">
         Надіслати
