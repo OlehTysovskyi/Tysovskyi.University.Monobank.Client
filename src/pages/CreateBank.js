@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Navigate } from "react-router-dom";
-import { useAuth } from "../contexts/authContext";
+import { useBankService } from "../services/bankService";
 import create_bank_cat from "../assets/images/create-bank-cat.jpg";
 
 const CreateBank = () => {
+  const { currentUser } = useAuth();
+  const { createBank } = useBankService();
+  const user = JSON.parse(currentUser);
+
   const [formData, setFormData] = useState({
+    user_id: user.id,
     name: "На ",
     goal_amount: 0,
   });
@@ -18,15 +23,23 @@ const CreateBank = () => {
     setFormData((prevFormData) => ({ ...prevFormData, name: newName }));
     setIsNameEntered(newName.trim() !== "" && newName.trim() !== "На");
   };
-  
+
   const handleChangeGoalAmount = (e) => {
     const newGoalAmount = e.target.value;
-    setFormData((prevFormData) => ({ ...prevFormData, goal_amount: newGoalAmount }));
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      goal_amount: newGoalAmount,
+    }));
   };
-  
-  const handleSubmit = (e) => {
+
+  const handleCreatingBank = async (e) => {
     e.preventDefault();
-    setRedirect(true);
+    try {
+      await createBank(formData);
+      setRedirect(true);
+    } catch (error) {
+      alert(error.message);
+    }
   };
 
   if (redirect) {
@@ -34,7 +47,7 @@ const CreateBank = () => {
   }
 
   return (
-    <form className="create-bank" onSubmit={handleSubmit}>
+    <form className="create-bank" onSubmit={handleCreatingBank}>
       <div className="header">
         <NavLink className="back-btn" to="/savings">
           -
@@ -55,6 +68,7 @@ const CreateBank = () => {
           name="goal_amount"
           value={formData.goal_amount}
           onChange={handleChangeGoalAmount}
+          inputMode="numeric"
         ></input>
       </div>
       <button type="submit" className="submit-btn" disabled={!isNameEntered}>
