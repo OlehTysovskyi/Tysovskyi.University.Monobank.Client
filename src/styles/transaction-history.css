@@ -56,12 +56,10 @@
 }
   
 .trans-item .user-data .avatar {
-    width: 4vh;
-    height: 4vh;
+    width: 5vh;
+    height: 5vh;
     margin: 0 1vh 0 0;
-    background-color: pink;
     border-radius: 50%;
-    border: 1px solid black;
 }
   
 .trans-item .user-data .username {
@@ -81,12 +79,12 @@
 .trans-item .avatar-incoming {
     background-image: url(../assets/images/incoming.jpg);
     background-position: center center;
-    background-size: contain;
+    background-size: cover;
 }
   
 .trans-item .avatar-outgoing {
     background-image: url(../assets/images/outgoing.jpg);
     background-position: center center;
-    background-size: contain;
+    background-size: cover;
 }
   
