@@ -11,7 +11,7 @@ const CreateBank = () => {
   const user = JSON.parse(currentUser);
 
   const [formData, setFormData] = useState({
-    user_id: user.id,
+    user_id: user?.id || "",
     name: "На ",
     goal_amount: 0,
   });
@@ -26,7 +26,7 @@ const CreateBank = () => {
   };
 
   const handleChangeGoalAmount = (e) => {
-    const newGoalAmount = e.target.value;
+    const newGoalAmount = parseFloat(e.target.value) || 0;
     setFormData((prevFormData) => ({
       ...prevFormData,
       goal_amount: newGoalAmount,
@@ -36,9 +36,9 @@ const CreateBank = () => {
   const handleCreatingBank = async (e) => {
     e.preventDefault();
     try {
-      console.log("Data:" + formData);
-      alert("Data:" + formData);
-      //await createBank(formData);
+      console.log("Data:", formData);
+      alert("Data: " + JSON.stringify(formData));
+      await createBank(formData);
       setRedirect(true);
     } catch (error) {
       alert(error.message);
