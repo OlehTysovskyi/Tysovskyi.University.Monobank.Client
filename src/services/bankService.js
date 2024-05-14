@@ -1,17 +1,16 @@
-import { useAuth } from "../contexts/authContext";
-
 export const useBankService = () => {
-  const { setCurrentCard } = useAuth();
-
   const createBank = async (formData) => {
     try {
-      const response = await fetch("https://tysovskyi-university-monobank-server.vercel.app/api/create-bank", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://tysovskyi-university-monobank-server.vercel.app/api/create-bank",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
       const data = await response.json();
       if (response.ok) {
         console.log("Bank created successfully");
@@ -26,65 +25,45 @@ export const useBankService = () => {
     }
   };
 
-  const getBankData = async () => {
+  const getBankData = async (bankId) => {
     try {
-      const cardId = localStorage.getItem("cardId");
-      if (!cardId) {
+      if (!bankId) {
         return null;
       }
 
-      const response = await fetch(`https://tysovskyi-university-monobank-server.vercel.app/api/get-card-by-id/${cardId}`);
+      const response = await fetch(
+        `https://tysovskyi-university-monobank-server.vercel.app/api/get-bank-by-id/${bankId}`
+      );
       if (!response.ok) {
-        throw new Error("Failed to fetch card data");
+        throw new Error("Failed to fetch bank data");
       }
 
-      const cardData = await response.json();
-      return cardData.card;
+      const bankData = await response.json();
+      return bankData.bank;
     } catch (error) {
-      console.error("Error fetching card data:", error);
+      console.error("Error fetching bank data:", error);
       return null;
     }
   };
 
-  const getUserCards = async (userId) => {
+  const getUserBanks = async (userId) => {
     try {
-      const response = await fetch(`https://tysovskyi-university-monobank-server.vercel.app/api/get-user-cards/${userId}`);
+      const response = await fetch(
+        `https://tysovskyi-university-monobank-server.vercel.app/api/get-user-banks/${userId}`
+      );
       if (!response.ok) {
-        throw new Error("Failed to fetch user cards");
+        throw new Error("Failed to fetch user banks");
       }
       const data = await response.json();
-      return data.cards;
+      return data.banks;
     } catch (error) {
-      console.error("Error fetching user cards:", error);
-    }
-  };
-
-  const updateBalance = async (formData) => {
-    try {
-      const response = await fetch("https://tysovskyi-university-monobank-server.vercel.app/api/update-balance", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      const data = await response.json();
-      if (response.ok) {
-        setCurrentCard(JSON.stringify(data.card));
-        return true;
-      } else {
-        return false;
-      }
-    } catch (error) {
-      throw new Error(error.message);
+      console.error("Error fetching user banks:", error);
     }
   };
 
   return {
     createBank,
-    getCardData,
-    getUserCards,
-    getUsernameByCardNum,
-    updateBalance,
+    getBankData,
+    getUserBanks,
   };
 };

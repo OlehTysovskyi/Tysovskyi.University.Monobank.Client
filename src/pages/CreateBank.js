@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Navigate } from "react-router-dom";
+import { useAuth } from "../contexts/authContext";
 import { useBankService } from "../services/bankService";
 import create_bank_cat from "../assets/images/create-bank-cat.jpg";
 
