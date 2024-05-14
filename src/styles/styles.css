@@ -34,11 +34,9 @@ body {
 
 @media (min-width: 768px) {
       body {
-        position: relative;
         margin: 0;
         padding: 0;
         overflow: hidden;
-        background-attachment: fixed;
       }
       
       body::before,
