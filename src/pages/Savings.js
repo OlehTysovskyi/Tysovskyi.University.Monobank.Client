@@ -4,7 +4,7 @@ import { useAuth } from "../contexts/authContext";
 import { useUserService } from "../services/userService";
 
 const Savings = () => {
-  const { currentUser, setCurrentCard } = useAuth();
+  const { currentUser } = useAuth();
   const user = JSON.parse(currentUser);
 
   const { getUserBanks } = useUserService();
@@ -15,6 +15,7 @@ const Savings = () => {
     const fetchBanks = async () => {
       try {
         const userBanks = await getUserBanks();
+        console.error(userBanks);
         if (Array.isArray(userBanks)) {
           setBanks(userBanks);
           const total = userBanks.reduce(
