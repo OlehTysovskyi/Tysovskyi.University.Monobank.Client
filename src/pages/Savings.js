@@ -11,14 +11,19 @@ const Savings = () => {
     const fetchBanks = async () => {
       try {
         const userBanks = await getUserBanks();
-        setBanks(userBanks);
-        const total = userBanks.reduce(
-          (sum, bank) => sum + parseFloat(bank.balance),
-          0
-        );
-        setTotalBalance(total);
+        if (Array.isArray(userBanks)) {
+          setBanks(userBanks);
+          const total = userBanks.reduce(
+            (sum, bank) => sum + parseFloat(bank.balance),
+            0
+          );
+          setTotalBalance(total);
+        } else {
+          setBanks([]);
+        }
       } catch (error) {
         console.error("Error fetching banks:", error);
+        setBanks([]);
       }
     };
 
