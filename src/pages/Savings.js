@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { useAuth } from "../contexts/authContext";
 import { useUserService } from "../services/userService";
 
 const Savings = () => {
+  const { currentUser, setCurrentCard } = useAuth();
+  const user = JSON.parse(currentUser);
+
   const { getUserBanks } = useUserService();
   const [banks, setBanks] = useState([]);
   const [totalBalance, setTotalBalance] = useState(0);
