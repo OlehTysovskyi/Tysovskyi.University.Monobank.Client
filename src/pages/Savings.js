@@ -28,7 +28,7 @@ const Savings = () => {
     };
 
     fetchBanks();
-  }, [getUserBanks]);
+  }, [user.id]);
 
   return (
     <div className="savings">
