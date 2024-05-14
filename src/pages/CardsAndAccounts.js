@@ -14,7 +14,7 @@ const CardsAndAccounts = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const cardsData = await getUserCards(user.id);
+        const cardsData = await getUserCards();
         setCards(cardsData);
       } catch (error) {
         console.error("Error fetching user cards:", error);
