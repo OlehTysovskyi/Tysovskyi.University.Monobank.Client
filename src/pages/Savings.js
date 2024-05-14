@@ -15,7 +15,7 @@ const Savings = () => {
     const fetchBanks = async () => {
       try {
         const userBanks = await getUserBanks();
-        console.error(userBanks);
+        alert(userBanks);
         if (Array.isArray(userBanks)) {
           setBanks(userBanks);
           const total = userBanks.reduce(
