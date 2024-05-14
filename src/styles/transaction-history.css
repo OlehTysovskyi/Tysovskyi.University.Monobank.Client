@@ -80,9 +80,13 @@
 
 .trans-item .avatar-incoming {
     background-image: url(../assets/images/incoming.jpg);
+    background-position: center center;
+    background-size: contain;
 }
   
 .trans-item .avatar-outgoing {
     background-image: url(../assets/images/outgoing.jpg);
+    background-position: center center;
+    background-size: contain;
 }
   
