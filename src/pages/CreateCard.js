@@ -1,31 +1,42 @@
-import React, { useState, useEffect } from "react";
-import { Navigate, NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink, Navigate } from "react-router-dom";
 import { useAuth } from "../contexts/authContext";
-import { useCardService } from "../services/cardService";
+import { useBankService } from "../services/bankService";
+import create_bank_cat from "../assets/images/create-bank-cat.jpg";
 
-const CreateCard = () => {
+const CreateBank = () => {
   const { currentUser } = useAuth();
-  const { createCard, getUserCards } = useCardService();
+  const { createBank } = useBankService();
   const user = JSON.parse(currentUser);
 
-  const [userCards, setUserCards] = useState([]);
-  const [showMessage, setShowMessage] = useState(false);
+  const [formData, setFormData] = useState({
+    user_id: user.id,
+    name: "На ",
+    goal_amount: 0,
+  });
+
   const [redirect, setRedirect] = useState(false);
-  const [cardsLoaded, setCardsLoaded] = useState(false);
+  const [isNameEntered, setIsNameEntered] = useState(false);
 
-  useEffect(() => {
-    const fetchUserCards = async () => {
-      const cards = await getUserCards(user.id);
-      setUserCards(cards);
-      setCardsLoaded(true);
-    };
+  const handleChangeName = (e) => {
+    const newName = e.target.value;
+    setFormData((prevFormData) => ({ ...prevFormData, name: newName }));
+    setIsNameEntered(newName.trim() !== "" && newName.trim() !== "На");
+  };
 
-    fetchUserCards();
-  }, [user.id]);
+  const handleChangeGoalAmount = (e) => {
+    const newGoalAmount = e.target.value;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      goal_amount: newGoalAmount,
+    }));
+  };
 
-  const handleCreatingCard = async (type) => {
+  const handleCreatingBank = async (e) => {
+    e.preventDefault();
     try {
-      await createCard({ user_id: user.id, type: type, balance: 0 });
+      alert(formData);
+      await createBank(formData);
       setRedirect(true);
     } catch (error) {
       alert(error.message);
@@ -33,52 +44,39 @@ const CreateCard = () => {
   };
 
   if (redirect) {
-    return <Navigate to="/" />;
+    return <Navigate to="/savings" />;
   }
 
   return (
-    <div className="create-card">
-      <NavLink className="back-btn" to="/cards-and-accounts">
-        -
-      </NavLink>
-      <div className="header">Відкрити картку або рахунок</div>
-      <div className="cards-container">
-        {cardsLoaded && (
-          <React.Fragment>
-            <div className="container-header">
-              {userCards.length === 2 ? (
-                <>
-                  Немає доступних карток <br /> для створення
-                </>
-              ) : (
-                "Картки"
-              )}
-            </div>
-            {!userCards.some((card) => card.type === "BLACK") && (
-              <div
-                className="card black-card"
-                onClick={() => handleCreatingCard("BLACK")}
-              >
-                <div className="stripe"></div>
-                <div className="stripe"></div>
-                Створити чорну картку
-              </div>
-            )}
-            {!userCards.some((card) => card.type === "WHITE") && (
-              <div
-                className="card white-card"
-                onClick={() => handleCreatingCard("WHITE")}
-              >
-                <div className="stripe"></div>
-                <div className="stripe"></div>
-                Створити білу картку
-              </div>
-            )}
-          </React.Fragment>
-        )}
+    <form className="create-bank" onSubmit={handleCreatingBank}>
+      <div className="header">
+        <NavLink className="back-btn" to="/savings">
+          -
+        </NavLink>
+        <img src={create_bank_cat} alt="cat"></img>
       </div>
-    </div>
+      <div className="input-con">
+        <label>На що накопичуємо?</label>
+        <input
+          name="name"
+          value={formData.name}
+          onChange={handleChangeName}
+        ></input>
+      </div>
+      <div className="input-con">
+        <label>Бажана сума накопичення?</label>
+        <input
+          name="goal_amount"
+          value={formData.goal_amount}
+          onChange={handleChangeGoalAmount}
+          inputMode="numeric"
+        ></input>
+      </div>
+      <button type="submit" className="submit-btn" disabled={!isNameEntered}>
+        Створити банку
+      </button>
+    </form>
   );
 };
 
-export default CreateCard;
+export default CreateBank;
