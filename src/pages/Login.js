@@ -31,7 +31,7 @@ const Login = () => {
   }
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
+    <div style={{ textAlign: "center", marginTop: "50px", position: absolute, zIndex: 1000}}>
       <form
         onSubmit={handleLogin}
         style={{
