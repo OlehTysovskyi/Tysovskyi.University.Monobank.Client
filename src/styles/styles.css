@@ -33,6 +33,36 @@ body {
 }
 
 @media (min-width: 768px) {
+      body {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      
+      body::before,
+      body::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: blur(3px);
+      }
+      
+      body::before {
+        left: 0;
+        background-image: url(../assets/images/monobank-wallpaper-left.png);
+        background-position: left center;
+      }
+      
+      body::after {
+        right: 0;
+        background-image: url(../assets/images/monobank-wallpaper-right.png);
+        background-position: -150px center;
+      }
 
     .body-container {
       max-width: 25vw;
@@ -42,8 +72,10 @@ body {
     }
 
     .main-container {
+      position: relative;
       width: 100%;
       height: fit-content;
+      z-index: 1000;
     }
 
   }

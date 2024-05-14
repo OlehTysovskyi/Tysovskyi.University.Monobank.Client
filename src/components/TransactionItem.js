@@ -12,11 +12,13 @@ const TransactionItem = ({ transfer, onClick }) => {
       ? "Від: " + transfer.username
       : transfer.username;
   const amountClass = transfer.type === "INCOMING" ? "incoming" : "outgoing";
+  const avatarClass =
+    transfer.type === "INCOMING" ? "avatar-incoming" : "avatar-outgoing";
 
   return (
     <div className="trans-item" onClick={handleItemClick}>
       <div className="user-data">
-        <div className="avatar"></div>
+        <div className={`avatar ${avatarClass}`}></div>
         <div className="username">{userNameWithSign}</div>
       </div>
       <div className={`amount ${amountClass}`}>{amountWithSign}</div>

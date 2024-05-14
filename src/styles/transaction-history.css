@@ -77,4 +77,12 @@
 .trans-item .incoming {
     color: green;
 }
+
+.trans-item .avatar-incoming {
+    background-image: url(../assets/images/incoming.jpg);
+}
+  
+.trans-item .avatar-outgoing {
+    background-image: url(../assets/images/outgoing.jpg);
+}
   
