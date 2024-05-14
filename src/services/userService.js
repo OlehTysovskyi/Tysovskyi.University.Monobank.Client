@@ -3,18 +3,25 @@ import { useAuth } from "../contexts/authContext";
 export const useUserService = () => {
   const { currentUser } = useAuth();
 
-  const getUserData = async () => {
-    try {
-      const userId = JSON.parse(currentUser).id;
-      if (!userId) {
-        return null;
-      }
+  let userId;
+  try {
+    userId = JSON.parse(currentUser)?.id;
+  } catch (error) {
+    console.error("Error parsing currentUser:", error);
+  }
 
-      const response = await fetch(`https://tysovskyi-university-monobank-server.vercel.app/api/get-user-by-id/${userId}`);
+  const getUserData = async () => {
+    if (!userId) {
+      console.error("User not found");
+      return null;
+    }
+    try {
+      const response = await fetch(
+        `https://tysovskyi-university-monobank-server.vercel.app/api/get-user-by-id/${userId}`
+      );
       if (!response.ok) {
         throw new Error("Failed to fetch user data");
       }
-
       const userData = await response.json();
       return userData.user;
     } catch (error) {
@@ -23,9 +30,15 @@ export const useUserService = () => {
     }
   };
 
-  const getUserCards = async (userId) => {
+  const getUserCards = async () => {
+    if (!userId) {
+      console.error("User not found");
+      return [];
+    }
     try {
-      const response = await fetch(`https://tysovskyi-university-monobank-server.vercel.app/api/get-user-cards/${userId}`);
+      const response = await fetch(
+        `https://tysovskyi-university-monobank-server.vercel.app/api/get-user-cards/${userId}`
+      );
       if (!response.ok) {
         throw new Error("Failed to fetch user cards");
       }
@@ -33,19 +46,47 @@ export const useUserService = () => {
       return data.cards;
     } catch (error) {
       console.error("Error fetching user cards:", error);
+      return [];
     }
   };
 
-  const getUserTransfers = async (userId) => {
+  const getUserTransfers = async () => {
+    if (!userId) {
+      console.error("User not found");
+      return [];
+    }
     try {
-      const response = await fetch(`https://tysovskyi-university-monobank-server.vercel.app/api/get-user-transfers/${userId}`);
+      const response = await fetch(
+        `https://tysovskyi-university-monobank-server.vercel.app/api/get-user-transfers/${userId}`
+      );
       if (!response.ok) {
-        throw new Error("Failed to fetch user cards");
+        throw new Error("Failed to fetch user transfers");
       }
       const data = await response.json();
       return data.transfers;
     } catch (error) {
-      console.error("Error fetching user cards:", error);
+      console.error("Error fetching user transfers:", error);
+      return [];
+    }
+  };
+
+  const getUserBanks = async () => {
+    if (!userId) {
+      console.error("User not found");
+      return [];
+    }
+    try {
+      const response = await fetch(
+        `https://tysovskyi-university-monobank-server.vercel.app/api/get-user-banks/${userId}`
+      );
+      if (!response.ok) {
+        throw new Error("Failed to fetch user banks");
+      }
+      const data = await response.json();
+      return data.banks;
+    } catch (error) {
+      console.error("Error fetching user banks:", error);
+      return [];
     }
   };
 
@@ -53,5 +94,6 @@ export const useUserService = () => {
     getUserData,
     getUserCards,
     getUserTransfers,
+    getUserBanks,
   };
 };

@@ -46,24 +46,8 @@ export const useBankService = () => {
     }
   };
 
-  const getUserBanks = async (userId) => {
-    try {
-      const response = await fetch(
-        `https://tysovskyi-university-monobank-server.vercel.app/api/get-user-banks/${userId}`
-      );
-      if (!response.ok) {
-        throw new Error("Failed to fetch user banks");
-      }
-      const data = await response.json();
-      return data.banks;
-    } catch (error) {
-      console.error("Error fetching user banks:", error);
-    }
-  };
-
   return {
     createBank,
     getBankData,
-    getUserBanks,
   };
 };
