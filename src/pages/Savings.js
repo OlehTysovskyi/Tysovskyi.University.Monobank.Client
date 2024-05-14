@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { useBankService } from "../services/bankService";
+import { useUserService } from "../services/userService";
 
 const Savings = () => {
-  const { getUserBanks } = useBankService();
+  const { getUserBanks } = useUserService();
   const [banks, setBanks] = useState([]);
   const [totalBalance, setTotalBalance] = useState(0);
 
