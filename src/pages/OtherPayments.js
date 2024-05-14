@@ -1,12 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import BackButton from "../components/BackButton";
 
 const OtherPayments = () => {
   return (
     <div className="other-payments">
-      <NavLink className="back-btn" to="/">
-        -
-      </NavLink>
+      <BackButton to="/" color="white"/>
       <div className="header">Інші платежі</div>
       <div className="payments-container">
         <div className="container-header">Категорії</div>

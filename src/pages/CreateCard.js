@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Navigate, NavLink } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+import BackButton from "../components/BackButton";
 import { useAuth } from "../contexts/authContext";
 import { useCardService } from "../services/cardService";
 
@@ -38,9 +39,7 @@ const CreateCard = () => {
 
   return (
     <div className="create-card">
-      <NavLink className="back-btn" to="/cards-and-accounts">
-        -
-      </NavLink>
+      <BackButton to="/card-and-accounts" color="#e75f5b"/>
       <div className="header">Відкрити картку або рахунок</div>
       <div className="cards-container">
         {cardsLoaded && (

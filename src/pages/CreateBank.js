@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
 import { Navigate } from "react-router-dom";
+import BackButton from "../components/BackButton";
 import { useAuth } from "../contexts/authContext";
 import { useBankService } from "../services/bankService";
 import create_bank_cat from "../assets/images/create-bank-cat.jpg";
@@ -50,9 +50,7 @@ const CreateBank = () => {
   return (
     <form className="create-bank" onSubmit={handleCreatingBank}>
       <div className="header">
-        <NavLink className="back-btn" to="/savings">
-          -
-        </NavLink>
+        <BackButton to="/savings" color="#e75f5b"/>
         <img src={create_bank_cat} alt="cat"></img>
       </div>
       <div className="input-con">

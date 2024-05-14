@@ -1,6 +1,5 @@
-// Support.js
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import BackButton from "../components/BackButton";
 import SuccessMessage from "../components/SuccessMessage";
 import { useSupportService } from "../services/supportService";
 
@@ -42,9 +41,7 @@ const Support = () => {
     <>
       <form className="support" onSubmit={handleSubmit}>
         <div className="header">
-          <NavLink className="back-btn" to="/more">
-            -
-          </NavLink>
+          <BackButton to="/more" color="#e75f5b"/>
           Підтримка
           <div className="small-text">Ми на зв'язку 24/7</div>
         </div>

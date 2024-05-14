@@ -84,3 +84,11 @@ body {
   color: white;
   cursor: not-allowed;
 }
+
+.back-btn {
+  width: 3vh;
+  height: 3vh;
+  position: absolute;
+  top: 2vh;
+  left: 2vh;
+}

@@ -65,17 +65,3 @@
     position: absolute;
     bottom: 12vh;
 }
-
-.create-transfer .back-btn {
-    width: 4vh;
-    height: 4vh;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 5vh;
-    color: white;
-    position: absolute;
-    top: 2.1vh;
-    left: 2.6vh;
-  }

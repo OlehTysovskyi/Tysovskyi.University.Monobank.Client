@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
 import { Navigate } from "react-router-dom";
+import BackButton from "../components/BackButton";
 import { useAuth } from "../contexts/authContext";
 import { useCardService } from "../services/cardService";
 
@@ -66,9 +66,7 @@ const IBANPayment = () => {
   return (
     <form onSubmit={handleCreatingTransfer} className="iban-payment">
       <div className="header">
-        <NavLink className="back-btn" to="/other-payments">
-          -
-        </NavLink>
+        <BackButton to="/other-payments" color="white"/>
         <div className="text">Платіж за IBAN</div>
         <input
           type="text"

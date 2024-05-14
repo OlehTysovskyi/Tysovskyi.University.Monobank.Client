@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
 import { Navigate } from "react-router-dom";
+import BackButton from "../components/BackButton";
 import { useAuth } from "../contexts/authContext";
 import { useCardService } from "../services/cardService";
 import { createTransfer } from "../services/transferService";
@@ -50,9 +50,7 @@ const CreateTransfer = () => {
   return (
     <form onSubmit={handleCreatingTransfer} className="create-transfer">
       <div className="header">
-        <NavLink className="back-btn" to="/">
-          -
-        </NavLink>
+        <BackButton to="/" color="white"/>
         <div className="text">Переказ на картку</div>
         <input
           type="text"
