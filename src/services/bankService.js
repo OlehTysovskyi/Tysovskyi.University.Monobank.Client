@@ -11,16 +11,21 @@ export const useBankService = () => {
           body: JSON.stringify(formData),
         }
       );
+
       const data = await response.json();
-      if (response.ok) {
-        console.log("Bank created successfully");
-        return data;
-      } else if (response.status === 400) {
-        throw new Error(data.message);
-      } else {
-        throw new Error("Bank creating failed");
+
+      if (!response.ok) {
+        if (response.status === 400) {
+          throw new Error(data.message);
+        } else {
+          throw new Error("Bank creating failed");
+        }
       }
+
+      console.log("Bank created successfully");
+      return data;
     } catch (error) {
+      console.error("Error creating bank:", error.message);
       throw new Error(error.message);
     }
   };
