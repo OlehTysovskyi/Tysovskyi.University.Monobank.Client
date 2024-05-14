@@ -36,8 +36,6 @@ const CreateBank = () => {
   const handleCreatingBank = async (e) => {
     e.preventDefault();
     try {
-      console.log("Data:", formData);
-      alert("Data: " + JSON.stringify(formData));
       await createBank(formData);
       setRedirect(true);
     } catch (error) {
