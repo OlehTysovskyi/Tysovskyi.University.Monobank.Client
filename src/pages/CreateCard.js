@@ -39,7 +39,7 @@ const CreateCard = () => {
 
   return (
     <div className="create-card">
-      <BackButton to="/card-and-accounts" color="#e75f5b"/>
+      <BackButton to="/cards-and-accounts" color="#e75f5b"/>
       <div className="header">Відкрити картку або рахунок</div>
       <div className="cards-container">
         {cardsLoaded && (
