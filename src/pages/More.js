@@ -9,8 +9,8 @@ const More = () => {
         <NavLink className="support" to="/support">
           <div className="icon" />
           <div>
-            Служба <br />
-            підтримки
+            Зв'язок <br />
+            з нами
           </div>
         </NavLink>
       </div>

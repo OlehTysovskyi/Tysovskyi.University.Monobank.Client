@@ -32,22 +32,15 @@ const Registration = () => {
   }
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <form
-        onSubmit={handleRegistration}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
+    <div className="registration-container">
+      <form onSubmit={handleRegistration} className="registration-form">
         <input
           type="text"
           name="username"
           value={formData.name}
           onChange={handleChange}
           placeholder="Enter your username"
-          style={{ marginBottom: "10px", padding: "8px", width: "300px" }}
+          className="registration-input"
         />
         <input
           type="email"
@@ -55,7 +48,7 @@ const Registration = () => {
           value={formData.email}
           onChange={handleChange}
           placeholder="Enter your email"
-          style={{ marginBottom: "10px", padding: "8px", width: "300px" }}
+          className="registration-input"
         />
         <input
           type="password"
@@ -63,20 +56,9 @@ const Registration = () => {
           value={formData.password}
           onChange={handleChange}
           placeholder="Enter your password"
-          style={{ marginBottom: "10px", padding: "8px", width: "300px" }}
+          className="registration-input"
         />
-        <button
-          type="submit"
-          style={{
-            padding: "10px 20px",
-            fontSize: "1rem",
-            backgroundColor: "green",
-            color: "white",
-            border: "none",
-            borderRadius: "5px",
-            cursor: "pointer",
-          }}
-        >
+        <button type="submit" className="registration-button">
           Register
         </button>
       </form>

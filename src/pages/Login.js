@@ -31,22 +31,15 @@ const Login = () => {
   }
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px"}}>
-      <form
-        onSubmit={handleLogin}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
+    <div className="login-container">
+      <form onSubmit={handleLogin} className="login-form">
         <input
           type="email"
           name="email"
           value={formData.email}
           onChange={handleChange}
           placeholder="Enter your email"
-          style={{ marginBottom: "10px", padding: "8px", width: "300px" }}
+          className="login-input"
         />
         <input
           type="password"
@@ -54,19 +47,11 @@ const Login = () => {
           value={formData.password}
           onChange={handleChange}
           placeholder="Enter your password"
-          style={{ marginBottom: "10px", padding: "8px", width: "300px" }}
+          className="login-input"
         />
         <button
           type="submit"
-          style={{
-            padding: "10px 20px",
-            fontSize: "1rem",
-            backgroundColor: "blue",
-            color: "white",
-            border: "none",
-            borderRadius: "5px",
-            cursor: "pointer",
-          }}
+          className="login-button"
         >
           Login
         </button>
