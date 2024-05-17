@@ -87,6 +87,18 @@ body {
   cursor: not-allowed;
 }
 
+.registration-button:disabled {
+  background-color: rgb(203, 203, 203);
+  color: white;
+  cursor: not-allowed;
+}
+
+.login-button:disabled {
+  background-color: rgb(203, 203, 203);
+  color: white;
+  cursor: not-allowed;
+}
+
 .back-btn {
   width: 3vh;
   height: 3vh;
