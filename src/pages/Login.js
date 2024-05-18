@@ -16,8 +16,7 @@ const Login = () => {
 
   const validateForm = (data) => {
     const emailValid = data.email.includes("@") && data.email.includes(".");
-    const passwordValid = data.password.length >= 8;
-    setFormValid(emailValid && passwordValid);
+    setFormValid(emailValid);
   };
 
   const handleChange = (e) => {
