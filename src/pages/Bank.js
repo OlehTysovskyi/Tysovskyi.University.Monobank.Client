@@ -7,15 +7,13 @@ import bankImage from "../assets/images/bank.jpg";
 const Bank = () => {
   const { id } = useParams();
   const { getBankData } = useBankService();
-  const [bankData, setBankData] = useState(null);
+  const [bankData, setBankData] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const data = await getBankData(id);
         setBankData(data);
-        alert(data.name);
-        alert(bankData);
       } catch (error) {
         console.error(error.message);
       }
@@ -29,7 +27,7 @@ const Bank = () => {
       <BackButton to="/savings" color="white" />
       <div className="bank-container">
         <div className="info">
-          <div className="name">{bankData.name}</div>
+          <div className="name">{bankData}</div>
           <div className="balance">{} ₴</div>
           <div className="statistics">
             Знято {} ₴ | Поповнено {} ₴
