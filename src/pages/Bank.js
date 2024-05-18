@@ -29,7 +29,6 @@ const Bank = () => {
       <div className="bank-container">
         <div className="info">
           <div className="name">{bankData.name}</div>
-          <div className="divider"></div>
           <div className="balance">{bankData.balance} ₴</div>
           <div className="statistics">
             Знято {bankData.withdraw_amount} ₴ | Поповнено {bankData.deposit_amount} ₴
