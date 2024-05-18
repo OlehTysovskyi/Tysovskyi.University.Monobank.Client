@@ -16,6 +16,7 @@ import OtherPayments from "../pages/OtherPayments";
 import IBANPayment from "../pages/IBANPayment";
 import Savings from "../pages/Savings";
 import CreateBank from "../pages/CreateBank";
+import Bank from "../pages/Bank";
 import More from "../pages/More";
 import Support from "../pages/Support";
 
@@ -39,6 +40,7 @@ const Navigation = () => {
           <Route path="/iban-payment" element={<IBANPayment />} />
           <Route path="/savings" element={<Savings />} />
           <Route path="/create-bank" element={<CreateBank />} />
+          <Route path="/bank/:id" element={<Bank />} />
           <Route path="/more" element={<More />} />
           <Route path="/support" element={<Support />} />
         </Route>
