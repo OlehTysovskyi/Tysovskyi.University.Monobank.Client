@@ -14,7 +14,7 @@ const Bank = () => {
       try {
         const data = await getBankData(id);
         setBankData(data);
-        alert(data);
+        alert(data.name);
         alert(bankData);
       } catch (error) {
         console.error(error.message);
