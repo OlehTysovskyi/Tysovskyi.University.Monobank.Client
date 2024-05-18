@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import { useBankService } from "../services/bankService";
 import BackButton from "../components/BackButton";
-import bank from "../assets/images/bank.jpg";
+import bankImage from "../assets/images/bank.jpg";
 
 const Bank = () => {
   const { id } = useParams();
@@ -14,7 +14,6 @@ const Bank = () => {
       try {
         const data = await getBankData(id);
         setBankData(data);
-        alert(bankData);
       } catch (error) {
         console.error(error.message);
       }
@@ -28,14 +27,14 @@ const Bank = () => {
       <BackButton to="/savings" color="white" />
       <div className="bank-container">
         <div className="info">
-          <div className="name">{bankData}</div>
-          <div className="balance">{bankData} ₴</div>
+          <div className="name">{}</div>
+          <div className="balance">{} ₴</div>
           <div className="statistics">
-            Знято {bankData} ₴ | Поповнено {bankData} ₴
+            Знято {} ₴ | Поповнено {} ₴
           </div>
         </div>
 
-        <img src={bank} alt="bank" />
+        <img src={bankImage} alt="bank" />
 
         <div className="options">
           <NavLink to="/deposit">
