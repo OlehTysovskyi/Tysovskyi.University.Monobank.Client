@@ -27,7 +27,7 @@ const Bank = () => {
       <BackButton to="/savings" color="white" />
       <div className="bank-container">
         <div className="info">
-          <div className="name">{bankData}</div>
+          <div className="name">{}</div>
           <div className="balance">{} ₴</div>
           <div className="statistics">
             Знято {} ₴ | Поповнено {} ₴
