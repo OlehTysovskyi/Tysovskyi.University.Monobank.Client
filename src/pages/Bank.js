@@ -7,7 +7,7 @@ import bankImage from "../assets/images/bank.jpg";
 const Bank = () => {
   const { id } = useParams();
   const { getBankData } = useBankService();
-  const [bankData, setBankData] = useState();
+  const [bankData, setBankData] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,7 +22,7 @@ const Bank = () => {
     };
 
     fetchData();
-  }, [id]);
+  }, [id, getBankData]);
 
   return (
     <div className="bank">
