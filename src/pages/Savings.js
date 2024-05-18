@@ -50,7 +50,7 @@ const Savings = () => {
         </NavLink>
         Банки
         {banks.map((bank) => (
-          <NavLink key={bank.id} className="bank" to={`/bank/${bank.id}`}>
+          <NavLink key={bank.id} className="bank-item" to={`/bank/${bank.id}`}>
             <div className="icon" />
             <div className="info">
               <div className="name">{bank.name}</div>
