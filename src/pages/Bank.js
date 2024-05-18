@@ -7,7 +7,7 @@ import bankImage from "../assets/images/bank.jpg";
 const Bank = () => {
   const { id } = useParams();
   const { getBankData } = useBankService();
-  const [bankData, setBankData] = useState(null);
+  const [bankData, setBankData] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
