@@ -44,6 +44,7 @@ export const useBankService = () => {
       }
 
       const bankData = await response.json();
+      console.error("bank data: " + bankData + " | " + bankData.bank);
       return bankData.bank;
     } catch (error) {
       console.error("Error fetching bank data:", error);
