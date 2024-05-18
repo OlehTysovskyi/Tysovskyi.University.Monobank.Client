@@ -14,6 +14,8 @@ const Bank = () => {
       try {
         const data = await getBankData(id);
         setBankData(data);
+        alert(data);
+        alert(bankData);
       } catch (error) {
         console.error(error.message);
       }
@@ -27,7 +29,7 @@ const Bank = () => {
       <BackButton to="/savings" color="white" />
       <div className="bank-container">
         <div className="info">
-          <div className="name">{data}</div>
+          <div className="name">{}</div>
           <div className="balance">{} ₴</div>
           <div className="statistics">
             Знято {} ₴ | Поповнено {} ₴
