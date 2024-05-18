@@ -46,12 +46,12 @@ const Bank = () => {
           <NavLink to="/withdraw">
             <div className="btn">-</div>
             <p>Зняти</p>
-            <p>з банки</п>
+            <p>з банки</p>
           </NavLink>
           <NavLink to="/break">
             <div className="btn">||</div>
             <p>Розбити</p>
-            <п>банку</п>
+            <p>банку</p>
           </NavLink>
         </div>
       </div>
